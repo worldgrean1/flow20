@@ -1,0 +1,16 @@
+{
+  "name": "transformer_hum",
+  "description": "Low frequency hum of an operational transformer",
+  "duration": 5.0,
+  "volume": 0.4,
+  "category": "ambient",
+  "loop": true,
+  "parameters": {
+    "frequency": {
+      "min": 50,
+      "max": 120
+    },
+    "reverb": 0.3,
+    "delay": 0
+  }
+} 

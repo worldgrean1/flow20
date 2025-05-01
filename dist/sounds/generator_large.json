@@ -1,0 +1,16 @@
+{
+  "name": "generator_large",
+  "description": "Heavy duty diesel generator engine sound for backup power system",
+  "duration": 12.0,
+  "volume": 0.7,
+  "category": "mechanical",
+  "loop": true,
+  "parameters": {
+    "frequency": {
+      "min": 80,
+      "max": 320
+    },
+    "reverb": 0.3,
+    "delay": 0
+  }
+} 
