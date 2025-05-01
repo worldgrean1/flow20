@@ -1,0 +1,51 @@
+/* Background utilities */
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
+
+.bg-gradient-conic {
+  background-image: conic-gradient(var(--tw-gradient-stops));
+}
+
+/* Shadow utilities for depth */
+.shadow-depth {
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom rotation transforms */
+.rotate-y-2 {
+  transform: rotateY(2deg);
+}
+
+.rotate-y-5 {
+  transform: rotateY(5deg);
+}
+
+/* 3D perspective container */
+.perspective-container {
+  perspective: 2000px;
+}
+
+/* Custom animation classes */
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+} 
