@@ -1,0 +1,19 @@
+/* Nv1 animation - Priority animation effects */
+@keyframes Nv1 {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+}
+
+.Nv1-active {
+  animation: Nv1 1.5s ease-in-out infinite;
+  position: relative;
+  z-index: 100;
+} 

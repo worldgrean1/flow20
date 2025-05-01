@@ -1,0 +1,740 @@
+@keyframes smokeRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-60px) scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes dieselSmoke {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.9;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-80px) scale(2) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes swirlSmoke {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translateY(-15px) scale(1.2) rotate(45deg);
+  }
+  50% {
+    transform: translateY(-35px) scale(1.4) rotate(90deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-50px) scale(1.6) rotate(135deg);
+  }
+  100% {
+    transform: translateY(-70px) scale(1.8) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeSmoke {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-50px) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes dieselBurst {
+  0% {
+    transform: translateY(0) scale(0.2);
+    opacity: 0.9;
+  }
+  10% {
+    transform: translateY(-5px) scale(1.5);
+    opacity: 0.9;
+  }
+  30% {
+    transform: translateY(-20px) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-90px) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes vibrate {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(1px, 1px); }
+  50% { transform: translate(-1px, -1px); }
+  75% { transform: translate(-1px, 1px); }
+  100% { transform: translate(1px, -1px); }
+}
+
+@keyframes vibrateIntense {
+  0% { transform: translate(0); }
+  15% { transform: translate(1.5px, 1px); }
+  30% { transform: translate(-1px, -1px); }
+  45% { transform: translate(-1.5px, 1px); }
+  60% { transform: translate(1px, -1px); }
+  75% { transform: translate(-0.5px, 0.5px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes heatShimmer {
+  0% {
+    opacity: 0.1;
+    filter: blur(0.5px);
+  }
+  50% {
+    opacity: 0.2;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 0.1;
+    filter: blur(0.5px);
+  }
+}
+
+@keyframes heatRise {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes heatPulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes bubble-up {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.drop-shadow-glow-red {
+  filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.5));
+}
+
+.drop-shadow-glow-green {
+  filter: drop-shadow(0 0 5px rgba(34, 197, 94, 0.5));
+}
+
+.drop-shadow-glow-blue {
+  filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.5));
+}
+
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+.animate-vibrate-sm {
+  animation: vibrate-sm 0.1s linear infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Energy flow animations */
+@keyframes energy-flow-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes energy-flow-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+/* Transformer-specific animations */
+@keyframes oil-bubble {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-15px) scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+@keyframes cooling-fan-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes transformer-hum {
+  0% {
+    transform: scale(1.000);
+  }
+  25% {
+    transform: scale(1.001);
+  }
+  50% {
+    transform: scale(1.000);
+  }
+  75% {
+    transform: scale(0.999);
+  }
+  100% {
+    transform: scale(1.000);
+  }
+}
+
+/* Styles for energy flow animation */
+.energy-flow-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom, transparent, #3b82f6 10%, #60a5fa 50%, #3b82f6 90%, transparent);
+  animation: energy-flow-down 1.5s linear infinite;
+}
+
+.energy-flow-up {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to top, transparent, #3b82f6 10%, #60a5fa 50%, #3b82f6 90%, transparent);
+  animation: energy-flow-up 1.5s linear infinite;
+}
+
+.cooling-fan {
+  animation: cooling-fan-rotate 2s linear infinite;
+}
+
+.transformer-hum {
+  animation: transformer-hum 0.5s ease-in-out infinite;
+}
+
+.oil-bubble {
+  animation: oil-bubble 3s ease-in-out infinite;
+}
+
+/* Oil flow animations for radiator fins */
+@keyframes oil-flow {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes oil-flow-reverse {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Oil bubbles animation for oil level indicator */
+@keyframes oil-bubble-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-10px) scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-20px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Temperature gradient animation */
+@keyframes temp-pulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* Electrical energy flow animation */
+@keyframes energy-pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) translateY(-2px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Magnetic field visualization animation */
+@keyframes magnetic-field-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+}
+
+/* Electric arc animation for high voltage */
+@keyframes electric-arc {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0) translateX(0) scale(0.8);
+  }
+  25% {
+    opacity: 0.9;
+    transform: translateY(-2px) translateX(1px) scale(1.1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(1px) translateX(-1px) scale(0.9);
+  }
+  75% {
+    opacity: 0.8;
+    transform: translateY(-1px) translateX(2px) scale(1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(0) translateX(0) scale(0.8);
+  }
+}
+
+@keyframes spark {
+  0% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes spark-delayed {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+}
+
+@keyframes spark-glow {
+  0% {
+    transform: scale(1.5);
+    opacity: 0.4;
+    filter: blur(3px);
+  }
+  50% {
+    transform: scale(2.5);
+    opacity: 0.2;
+    filter: blur(6px);
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0.4;
+    filter: blur(3px);
+  }
+}
+
+.animate-spark {
+  animation: spark 0.8s ease-in-out infinite;
+}
+
+.animate-spark-delayed {
+  animation: spark-delayed 0.8s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.animate-spark-glow {
+  animation: spark-glow 0.8s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+/* Energy flow animation */
+@keyframes energy-pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) translateY(-2px);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-energy {
+  animation: energy-pulse 1.5s ease-in-out infinite;
+}
+
+/* Transformer glow animation */
+@keyframes transformer-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.animate-transformer-glow {
+  animation: transformer-glow 2s ease-in-out infinite;
+}
+
+/* Transformer Bushing Animations */
+@keyframes bushing-energized {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes terminal-energized {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes corona-ray {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--rotation)) translateY(-200%) scale(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: rotate(var(--rotation)) translateY(-220%) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--rotation)) translateY(-200%) scale(0.8);
+  }
+}
+
+@keyframes leakage-current {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.bushing-energized {
+  animation: bushing-energized 2s ease-in-out infinite;
+}
+
+.terminal-energized {
+  animation: terminal-energized 1.5s ease-in-out infinite;
+}
+
+.leakage-current-effect {
+  animation: leakage-current 2s linear infinite;
+}
+
+/* Animation for smoke particles */
+@keyframes riseAndFade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+}
+
+/* Animation for heat shimmer effect */
+@keyframes heatShimmer {
+  0% {
+    opacity: 0.1;
+    filter: blur(0.5px);
+  }
+  50% {
+    opacity: 0.2;
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 0.1;
+    filter: blur(0.5px);
+  }
+}
+
+/* Animation for slow spinning */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation for diesel smoke */
+@keyframes dieselSmoke {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-40px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Animation for swirling smoke */
+@keyframes swirlSmoke {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-30px) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* Animation for fading smoke */
+@keyframes fadeSmoke {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-50px) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Animation for diesel bursts */
+@keyframes dieselBurst {
+  0% {
+    transform: scale(0.2);
+    opacity: 0.9;
+  }
+  20% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Animation for heat glow */
+@keyframes glow {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+/* Animation for rising heat */
+@keyframes heatRise {
+  0% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+}
+
+/* Animation for heat pulse */
+@keyframes heatPulse {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+/* Animation for subtle vibration */
+@keyframes vibrate-sm {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(-1px, -1px);
+  }
+  60% {
+    transform: translate(1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Apply animations to classes */
+.animate-spin-slow {
+  animation: spin-slow 6s linear infinite;
+}
+
+.animate-vibrate-sm {
+  animation: vibrate-sm 0.1s linear infinite;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,205 @@
+.bushing {
+  position: relative;
+  width: 40px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease;
+  z-index: 50;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.bushingBody {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.bushingRibs {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  left: -10%;
+}
+
+.rib {
+  height: 8px;
+  background: linear-gradient(to bottom, #d0d0d0, #a0a0a0);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.terminal {
+  position: absolute;
+  top: -15px;
+  width: 24px;
+  height: 24px;
+  background: #808080;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.coronaEffect {
+  position: absolute;
+  top: -30px;
+  width: 60px;
+  height: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.coronaRay {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: rgba(135, 206, 235, 0.6);
+  transform-origin: bottom center;
+}
+
+.sparkEffect {
+  position: absolute;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.leakageCurrent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.leakageParticle {
+  position: absolute;
+  width: 2px;
+  height: 8px;
+  background: rgba(0, 191, 255, 0.6);
+  border-radius: 50%;
+}
+
+.statusIndicator {
+  position: absolute;
+  bottom: -10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.statusNormal {
+  background-color: #4CAF50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+.statusWarning {
+  background-color: #FFC107;
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+}
+
+.statusFault {
+  background-color: #F44336;
+  box-shadow: 0 0 8px rgba(244, 67, 54, 0.6);
+}
+
+/* Insulator rings */
+.insulatorRings {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.insulatorRing {
+  width: 24px;
+  height: 10px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 60;
+}
+
+.insulatorRingSmall {
+  width: 16px;
+  height: 6px;
+  background: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 60;
+}
+
+.connectingLine {
+  position: absolute;
+  top: -160px;
+  width: 3px;
+  height: 160px;
+  background: #d8d8d8;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 49;
+}
+
+/* Side-specific styles */
+.left {
+  transform: rotate(-15deg);
+}
+
+.right {
+  transform: rotate(15deg);
+}
+
+/* Bottom bushing specific styles */
+.bottomInsulatorRings {
+  position: absolute;
+  bottom: -120px;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomConnectingLine {
+  position: absolute;
+  bottom: -160px;
+  top: auto;
+  width: 3px;
+  height: 160px;
+  background: #d8d8d8;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 49;
+}
+
+/* Energized state styles */
+.energized .bushingBody {
+  background: linear-gradient(to bottom, #f0f0f0, #c0c0c0);
+}
+
+.energized .terminal {
+  background: #a0a0a0;
+} 

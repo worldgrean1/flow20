@@ -1,0 +1,92 @@
+/* Police beacon animations */
+
+/* Red-blue color rotation animation */
+@keyframes police-light-colors {
+  0% {
+    background-color: rgba(239, 68, 68, 0.9); /* Red */
+    box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.7);
+  }
+  45% {
+    background-color: rgba(239, 68, 68, 0.9); /* Red */
+    box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.7);
+  }
+  50% {
+    background-color: rgba(59, 130, 246, 0.9); /* Blue */
+    box-shadow: 0 0 20px 5px rgba(59, 130, 246, 0.7);
+  }
+  95% {
+    background-color: rgba(59, 130, 246, 0.9); /* Blue */
+    box-shadow: 0 0 20px 5px rgba(59, 130, 246, 0.7);
+  }
+  100% {
+    background-color: rgba(239, 68, 68, 0.9); /* Red */
+    box-shadow: 0 0 20px 5px rgba(239, 68, 68, 0.7);
+  }
+}
+
+/* Physical rotation of the light */
+@keyframes police-light-rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulsing glow effect animation */
+@keyframes police-light-pulse {
+  0% {
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 0.3;
+    filter: blur(2px);
+  }
+}
+
+/* Reflector movement animation */
+@keyframes police-light-reflector-move {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+/* Combined class for the colored light element with rotation */
+.police-light-color-rotate {
+  animation: police-light-colors 1s infinite linear, police-light-rotation 3s infinite linear;
+}
+
+/* Class for the light reflector */
+.police-light-reflector {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: police-light-reflector-move 1.5s infinite ease-in-out;
+}
+
+/* Class for the outer glow effect */
+.police-light-glow {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.7) 0%, transparent 70%);
+  animation: police-light-pulse 2s infinite ease-in-out;
+}
+
+/* Active state for the entire light component */
+.police-light-active {
+  box-shadow: 0 0 15px 2px rgba(255, 255, 255, 0.3);
+} 
